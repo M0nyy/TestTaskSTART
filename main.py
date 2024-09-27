@@ -1,10 +1,13 @@
 import asyncio
 from capture_metrics.collector import MetricsCapture
 from capture_metrics.sender import MetricsSender
+from settings import victoria_url_to_send
 
 
 async def main():
-    victoria_url = "http://127.0.0.1:8428/api/v1/import/prometheus"
+    
+    victoria_url = victoria_url_to_send
+
     metrics_sender = MetricsSender(victoria_url)
     metrics_capture = MetricsCapture()
     
@@ -14,7 +17,7 @@ async def main():
         
         await metrics_sender.send_metrics(metrics)
         
-        await asyncio.sleep(5)
+        await asyncio.sleep(60)
 
 
 if __name__ == '__main__':
