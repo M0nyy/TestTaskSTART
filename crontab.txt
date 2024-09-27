@@ -1,0 +1,1 @@
+* * * * * /home/ubuntu/test_task_SI/venv/bin/python /home/ubuntu/test_task_SI/main.py

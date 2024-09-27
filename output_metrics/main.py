@@ -1,6 +1,6 @@
 import asyncio
-from output_metrics.collector import MetricsCollector
-from output_metrics.writer import MetricsWriter
+from .collector import MetricsCollector
+from .writer import MetricsWriter
 
 from settings import victoria_url, queries, filename
 
