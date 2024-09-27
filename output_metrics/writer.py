@@ -10,7 +10,7 @@ class MetricsWriter:
 
 
     def write_to_csv(self, metrics: dict, metric_name: str) -> None:
-        with open(self.filename, mode='w') as file:
+        with open(self.filename, mode='a') as file:
             writer = csv.writer(file)
             writer.writerow(["DateTime", metric_name])
 
